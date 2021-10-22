@@ -1,0 +1,44 @@
+@media (max-width: 720px) {
+    #contact {
+        --fontSize: 3.5rem;
+        background-color: var(--black);
+        color: var(--grayLight);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        padding: 130px 0;
+
+        .contact-list {
+            display: flex;
+            gap: 2rem;
+            .contact-item {
+                display: flex;
+
+                a {
+                    --size-brand: 3rem;
+
+                    display: flex;
+                    align-items: center;
+
+                    font-size: 1.5rem;
+                    gap: 0.4rem;
+
+                    font-family: "roboto";
+                    span {
+                        display: none;
+                        order: 1;
+                    }
+                    img {
+                        display: block;
+                        order: 0;
+                        width: var(--size-brand);
+                        height: var(--size-brand);
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}

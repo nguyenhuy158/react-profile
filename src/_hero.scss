@@ -1,0 +1,62 @@
+.hero {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: var(--gray);
+  // background: linear-gradient(
+  //     180deg,
+  //     rgba(0, 0, 0, 0.5084908963585435) 0%,
+  //     rgba(0, 0, 0, 0) 100%,
+  //     rgba(255, 255, 255, 0.4412640056022409) 100%
+  //   ),
+  //   url("../data/hero/1.jpg");
+  background-position: center;
+  background-size: cover;
+
+  transition: background-image 1s linear;
+
+  & > .name {
+    --sizeName: 4rem;
+    --sizeJob: 1rem;
+
+    font-size: var(--sizeName);
+    font-weight: normal;
+    letter-spacing: 0.5rem;
+    color: var(--white);
+    display: inline-block;
+
+    position: relative;
+    &:after {
+      content: attr(data-job);
+      position: absolute;
+      bottom: 0;
+      top: 100%;
+      transform: translate(-100%, -1rem);
+
+      font-size: var(--sizeJob);
+      font-weight: 300;
+      font-style: italic;
+      letter-spacing: 0.2rem;
+      color: var(--red);
+    }
+  }
+  & > .job {
+    display: none;
+
+    font-size: var(--sizeJob);
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: 0.2rem;
+    color: var(--red);
+  }
+
+  @media (max-width: 412px) {
+    --sizeName: 2.5rem;
+    --sizeJob: 1rem;
+  }
+}

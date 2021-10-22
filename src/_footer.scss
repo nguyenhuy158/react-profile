@@ -1,0 +1,22 @@
+footer {
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-between;
+  padding: 2.2rem 8rem;
+  font-size: 1.2rem;
+  color: var(--grayLight);
+  border-top: 0.25rem solid var(--red);
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    span {
+      &:first-child {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 375px) {
+  }
+}
