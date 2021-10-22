@@ -1,2 +1,7 @@
 @media (max-width: 720px) {
+    .projects {
+        .grid {
+            grid-template-rows: repeat(10, 300px);
+        }
+    }
 }

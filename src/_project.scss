@@ -30,7 +30,7 @@
     display: grid;
     gap: 2rem;
     // grid-template-columns: repeat(3, 1fr);
-    // grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 300px);
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     .project {
       box-shadow: 1px 1px 3px var(--black);
@@ -74,6 +74,8 @@
   }
 
   .show-all {
+    cursor: not-allowed;
+    pointer-events: visible;
     border-radius: 2px;
     padding: 0.8rem 1rem;
     background-color: var(--gray);

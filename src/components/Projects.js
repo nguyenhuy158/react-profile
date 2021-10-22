@@ -16,12 +16,24 @@ function Projects(props) {
     <section className="projects link-to-nav" id="project">
       <h2 className="title">There are some of my projects</h2>
       <div className="grid">
-        {projects.map((project) => (
-          <Card url={project.url} name={project.name} srcImg={project.srcImg} />
+        {projects.map((project, index) => (
+          <Card
+            url={project.url}
+            name={project.name}
+            srcImg={project.srcImg}
+            key={index}
+          />
         ))}
       </div>
 
-      <a href="#" className="show-all">
+      <a
+        href="#"
+        className="show-all"
+        onClick={(e) => {
+          // console.log("hi");
+          e.preventDefault();
+        }}
+      >
         <span>Show All</span>
         <i className="bx bx-chevron-right"></i>
       </a>
