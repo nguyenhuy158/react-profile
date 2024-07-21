@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web:
+    image: registry.gitlab.com/huy.ntq02/farmnet/profile:latest-arm64v8
+    build: .
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "443:3000"
+      - "8080:3000"
+      - "80:3000"

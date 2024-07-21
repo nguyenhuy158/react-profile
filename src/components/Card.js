@@ -17,7 +17,7 @@ function Card(props) {
   const { url, name, srcImg } = { ...props };
   return (
     <a href={url} className="project">
-      <img src={process.env.PUBLIC_URL + srcImg} alt="quiz app" />
+      <img src={"." + srcImg} alt="picture from huyit08" />
       <p className="name">{name}</p>
     </a>
   );
